@@ -1,0 +1,72 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "_LoginLayout";
+}
+
+<!-- begin login -->
+<div class="login login-v2" data-pageload-addclass="animated fadeIn">
+    <!-- begin brand -->
+    <div class="login-header">
+        <div class="brand">
+            <span class="logo"></span> <b>Color</b> Admin
+            <small>responsive bootstrap 4 admin template</small>
+        </div>
+        <div class="icon">
+            <i class="fa fa-lock"></i>
+        </div>
+    </div>
+    <!-- end brand -->
+    <!-- begin login-content -->
+    <div class="login-content">
+        <form id="account" method="post" class="m-t" role="form">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                @*<label asp-for="Input.Email"></label>*@
+                <input asp-for="Input.Email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="Input.Password"></label>*@
+                <input asp-for="Input.Password" class="form-control" placeholder="Password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label asp-for="Input.RememberMe">
+                        <input asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+            </div>
+            <div class="login-buttons">
+                <button type="submit" class="btn btn-success btn-block btn-lg">Sign me in</button>
+            </div>
+            <div class="m-t-20">
+                Do not have an account? Click <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">here</a> to register.
+            </div>
+            <div class="m-t-5">
+               Forgot your password? Click <a id="forgot-password" asp-page="./ForgotPassword">here</a> to recover it.
+            </div>
+        </form>
+    </div>
+    <!-- end login-content -->
+</div>
+<!-- end login -->
+<!-- begin login-bg -->
+@*<ul class="login-bg-list clearfix">
+    <li class="active"><a href="javascript:;" data-click="change-bg" data-img="/img/login-bg/login-bg-17.jpg" style="background-image: url(/img/login-bg/login-bg-17.jpg)"></a></li>
+    <li><a href="javascript:;" data-click="change-bg" data-img="/img/login-bg/login-bg-16.jpg" style="background-image: url(/img/login-bg/login-bg-16.jpg)"></a></li>
+    <li><a href="javascript:;" data-click="change-bg" data-img="/img/login-bg/login-bg-15.jpg" style="background-image: url(/img/login-bg/login-bg-15.jpg)"></a></li>
+    <li><a href="javascript:;" data-click="change-bg" data-img="/img/login-bg/login-bg-14.jpg" style="background-image: url(/img/login-bg/login-bg-14.jpg)"></a></li>
+    <li><a href="javascript:;" data-click="change-bg" data-img="/img/login-bg/login-bg-13.jpg" style="background-image: url(/img/login-bg/login-bg-13.jpg)"></a></li>
+    <li><a href="javascript:;" data-click="change-bg" data-img="/img/login-bg/login-bg-12.jpg" style="background-image: url(/img/login-bg/login-bg-12.jpg)"></a></li>
+</ul>*@
+<!-- end login-bg -->
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

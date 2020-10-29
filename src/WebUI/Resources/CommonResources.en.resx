@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>What is Switch?</value>
+  </data>
+  <data name="AddCountryRes" xml:space="preserve">
+    <value>Add Country</value>
+  </data>
+  <data name="AddDocumentCategoryRes" xml:space="preserve">
+    <value>Add Document Category</value>
+  </data>
+  <data name="AddDocumentTypeRes" xml:space="preserve">
+    <value>Add Document Type</value>
+  </data>
+  <data name="AddHSCodePoolRes" xml:space="preserve">
+    <value>Add HS Code</value>
+  </data>
+  <data name="AddOrganisationalUserRes" xml:space="preserve">
+    <value>Create User Account</value>
+  </data>
+  <data name="AddOrganisationApprovalRoleRes" xml:space="preserve">
+    <value>Add Organisation Approval Role</value>
+  </data>
+  <data name="AddPermissionRes" xml:space="preserve">
+    <value>Add Permission</value>
+  </data>
+  <data name="AddProcessRequiredDocumentRes" xml:space="preserve">
+    <value>Add Process Required Document</value>
+  </data>
+  <data name="AddProcessRes" xml:space="preserve">
+    <value>Add Process</value>
+  </data>
+  <data name="AddRequiredDocumentRes" xml:space="preserve">
+    <value>Add Required Document</value>
+  </data>
+  <data name="AddResourceAreaRes" xml:space="preserve">
+    <value>Add Resource Area</value>
+  </data>
+  <data name="AddResourceRes" xml:space="preserve">
+    <value>Add Resource</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>5th Floor New Cocoshe Building, Airport Accra, Ghana</value>
+  </data>
+  <data name="AddSubscriptionPlanRes" xml:space="preserve">
+    <value>Add Subscription Plan</value>
+  </data>
+  <data name="AddSubscriptionTypeRes" xml:space="preserve">
+    <value>Add SubscriptionType</value>
+  </data>
+  <data name="AddTopResourceRes" xml:space="preserve">
+    <value>Add Resource Header</value>
+  </data>
+  <data name="AddVehicleMakeRes" xml:space="preserve">
+    <value>Add Vehicle Make</value>
+  </data>
+  <data name="AddVehicleModelRes" xml:space="preserve">
+    <value>Add Vehicle Model</value>
+  </data>
+  <data name="AdminDashboardRes" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="AdministrationRes" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="AllCalculatedDutyListRes" xml:space="preserve">
+    <value>All Calculated Duties</value>
+  </data>
+  <data name="Availablefor" xml:space="preserve">
+    <value>Available for</value>
+  </data>
+  <data name="CalculatedDutyDetailsRes" xml:space="preserve">
+    <value>Calculated Duty Information</value>
+  </data>
+  <data name="CalculatedDutyResultRes" xml:space="preserve">
+    <value>Calculated Duty Result</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="Command" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Commentslbl" xml:space="preserve">
+    <value>Comments and Remarks</value>
+  </data>
+  <data name="ConfirmCreateSubmissionMessage" xml:space="preserve">
+    <value>Please note that after clicking on OK to confirm submit action, you will not be able to make changes to specified details, confirm that you have submitted accurate and required details.</value>
+  </data>
+  <data name="ConfirmCreateSubmissionTitle" xml:space="preserve">
+    <value>Confirm Submission</value>
+  </data>
+  <data name="ConfirmDeleteSubmissionMessage" xml:space="preserve">
+    <value>Please note that after clicking on OK to confirm submit action, you will not be able to make changes to specified details, confirm that you have submitted accurate and required details.</value>
+  </data>
+  <data name="ConfirmDeleteSubmissionTitle" xml:space="preserve">
+    <value>Confirm Deletion</value>
+  </data>
+  <data name="Confirmedlbl" xml:space="preserve">
+    <value>confirmed</value>
+  </data>
+  <data name="ConfirmUpdateSubmissionMessage" xml:space="preserve">
+    <value>Please note that after clicking on OK to confirm submit action, you will not be able to make changes to specified details, confirm that you have submitted accurate and required details.</value>
+  </data>
+  <data name="ConfirmUpdateSubmissionTitle" xml:space="preserve">
+    <value>Confirm Update</value>
+  </data>
+  <data name="ConfirmViewDutyMessage" xml:space="preserve">
+    <value>Please note that after clicking on OK to confirm submit action, you will be charge after your duty is been display.</value>
+  </data>
+  <data name="ConfirmViewingDutyTitle" xml:space="preserve">
+    <value>Charges Will Apply</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="CubeAdminDescription" xml:space="preserve">
+    <value>WBC Switch Administrator</value>
+  </data>
+  <data name="CubeClientAdminDescription" xml:space="preserve">
+    <value>Organisational Administrator</value>
+  </data>
+  <data name="CubeClientDescription" xml:space="preserve">
+    <value>Client User</value>
+  </data>
+  <data name="CurrentStatuslbl" xml:space="preserve">
+    <value>Current Status</value>
+  </data>
+  <data name="DashBoardRes" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DataTableDeleteBtnlbl" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DataTableDetailsBtnlbl" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="DataTableManageBtnlbl" xml:space="preserve">
+    <value>Manage Model</value>
+  </data>
+  <data name="DataTableUpdateBtnlbl" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="DeleteDocumentCategoryRes" xml:space="preserve">
+    <value>Delete Document Category</value>
+  </data>
+  <data name="DeleteHSCodePoolRes" xml:space="preserve">
+    <value>Delete HS Code</value>
+  </data>
+  <data name="DeleteOrganisationApprovalRoleRes" xml:space="preserve">
+    <value>Delete Organisation Approval Role</value>
+  </data>
+  <data name="DeletePermissionRes" xml:space="preserve">
+    <value>Delete Permission</value>
+  </data>
+  <data name="DeleteProcessRequiredDocumentRes" xml:space="preserve">
+    <value>Delete Process Required Document</value>
+  </data>
+  <data name="DeleteProcessRes" xml:space="preserve">
+    <value>Delete Process</value>
+  </data>
+  <data name="DeleteRequiredDocumentRes" xml:space="preserve">
+    <value>Delete Required Document</value>
+  </data>
+  <data name="DeleteResourceAreaRes" xml:space="preserve">
+    <value>Delete Resource Area</value>
+  </data>
+  <data name="DeleteResourceRes" xml:space="preserve">
+    <value>Delete Resource</value>
+  </data>
+  <data name="DeleteSubscriptionPlanRes" xml:space="preserve">
+    <value>Delete Subscription Plan</value>
+  </data>
+  <data name="DeleteSubscriptionTypeRes" xml:space="preserve">
+    <value>DeleteSubscriptionType</value>
+  </data>
+  <data name="DeleteTopResourceRes" xml:space="preserve">
+    <value>Delete Resource Header</value>
+  </data>
+  <data name="DesignerRes" xml:space="preserve">
+    <value>Workflow Designer</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>Developer</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="DocumentHistory" xml:space="preserve">
+    <value>Document Transition History</value>
+  </data>
+  <data name="DutyCalculatorRes" xml:space="preserve">
+    <value>Duty Calculator</value>
+  </data>
+  <data name="DutySearchHistoryRes" xml:space="preserve">
+    <value>Duty Search History</value>
+  </data>
+  <data name="Enabledlbl" xml:space="preserve">
+    <value>enabled</value>
+  </data>
+  <data name="ErrorRes" xml:space="preserve">
+    <value>Page Not Found</value>
+  </data>
+  <data name="FooterExcerpt" xml:space="preserve">
+    <value>Switch is a cost effective and intelligent solution that enables traders to easily determine or find the appropriate HS code of the products according to the national customs tariffs. In addition, Switch provides detailed information about import and export regulatory requirement and trade statistics of the product. </value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="GeneralGoodDutyResult" xml:space="preserve">
+    <value>Commodity Details</value>
+  </data>
+  <data name="GeneralGoodsDutyRes" xml:space="preserve">
+    <value>General Goods Duty Calculator</value>
+  </data>
+  <data name="GeneralGoodsHistoryRes" xml:space="preserve">
+    <value>General Goods Duty History</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="InboxRes" xml:space="preserve">
+    <value>Request Pending Approval</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="ListChamberRegistrationRes" xml:space="preserve">
+    <value>Chamber Registrations</value>
+  </data>
+  <data name="ListCountryRes" xml:space="preserve">
+    <value>Country Management</value>
+  </data>
+  <data name="ListDocumentCategoryRes" xml:space="preserve">
+    <value>Document Categories</value>
+  </data>
+  <data name="ListDocumentTypeRes" xml:space="preserve">
+    <value>Document Types</value>
+  </data>
+  <data name="ListHSCodePoolRes" xml:space="preserve">
+    <value>HS Codes</value>
+  </data>
+  <data name="ListInboxRes" xml:space="preserve">
+    <value>Request Pending Approval</value>
+  </data>
+  <data name="ListOrganisationApprovalRoleRes" xml:space="preserve">
+    <value>Organisation Approval Roles</value>
+  </data>
+  <data name="ListPermissionRes" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="ListProcessRequiredDocumentRes" xml:space="preserve">
+    <value>Process Required Documents</value>
+  </data>
+  <data name="ListProcessRes" xml:space="preserve">
+    <value>Processes</value>
+  </data>
+  <data name="ListRequiredDocumentRes" xml:space="preserve">
+    <value>Required Documents</value>
+  </data>
+  <data name="ListResourceAreasRes" xml:space="preserve">
+    <value>Resource Areas</value>
+  </data>
+  <data name="ListResourcesRes" xml:space="preserve">
+    <value>Resources</value>
+  </data>
+  <data name="ListSubscriptionPlanRes" xml:space="preserve">
+    <value>Subcription Plan </value>
+  </data>
+  <data name="ListSubscriptionTypeRes" xml:space="preserve">
+    <value>Subscription Type</value>
+  </data>
+  <data name="ListTopResourcesRes" xml:space="preserve">
+    <value>Resource Headers</value>
+  </data>
+  <data name="ListUsersRes" xml:space="preserve">
+    <value>Organisational Users</value>
+  </data>
+  <data name="ListVehicleMakeRes" xml:space="preserve">
+    <value>Manage Vehicle Makes</value>
+  </data>
+  <data name="ListVehicleModelRes" xml:space="preserve">
+    <value>Manage Vehicle Model</value>
+  </data>
+  <data name="Lockedlbl" xml:space="preserve">
+    <value>locked</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Mandatorylbl" xml:space="preserve">
+    <value>Mandatory</value>
+  </data>
+  <data name="ManualDutyCalculationRes" xml:space="preserve">
+    <value>Calculate Duty</value>
+  </data>
+  <data name="MasterItemsRes" xml:space="preserve">
+    <value>Master Items</value>
+  </data>
+  <data name="MenuAreaRes" xml:space="preserve">
+    <value>Resources</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="NotConfirmedlbl" xml:space="preserve">
+    <value>not confirmed</value>
+  </data>
+  <data name="NotEnabledlbl" xml:space="preserve">
+    <value>not enabled</value>
+  </data>
+  <data name="NotLockedlbl" xml:space="preserve">
+    <value>not locked</value>
+  </data>
+  <data name="OrganisationalUsersRes" xml:space="preserve">
+    <value>Organisational Users</value>
+  </data>
+  <data name="OwnedByDutyApprovalListRes" xml:space="preserve">
+    <value>Owned By Duty</value>
+  </data>
+  <data name="PendingDutyApprovalDetailRes" xml:space="preserve">
+    <value>Calculate Duty Information</value>
+  </data>
+  <data name="PendingDutyApprovalListRes" xml:space="preserve">
+    <value>Pending Duty Pool</value>
+  </data>
+  <data name="PendingDutyListModelRes" xml:space="preserve">
+    <value>Pending Duty Calculator List</value>
+  </data>
+  <data name="PendingDutyStatusRes" xml:space="preserve">
+    <value>Pending Duty Status</value>
+  </data>
+  <data name="PermissionRes" xml:space="preserve">
+    <value>Permission</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>Pricing</value>
+  </data>
+  <data name="PricingRes" xml:space="preserve">
+    <value>Pricing</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterOnLoginRes" xml:space="preserve">
+    <value>Register Or Login</value>
+  </data>
+  <data name="RegisterRes" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="RequireAdminRolelbl" xml:space="preserve">
+    <value>Require Admin Role</value>
+  </data>
+  <data name="SearchByChassisRes" xml:space="preserve">
+    <value>Search By Chassis</value>
+  </data>
+  <data name="SearchByMakeRes" xml:space="preserve">
+    <value>Search By Makes</value>
+  </data>
+  <data name="SelectActionlbl" xml:space="preserve">
+    <value>Select Action</value>
+  </data>
+  <data name="SelectListDefault" xml:space="preserve">
+    <value>Choose...</value>
+  </data>
+  <data name="SelectListDefaultValue" xml:space="preserve">
+    <value>--Select Option--</value>
+  </data>
+  <data name="SelectListDefaultValueCountry" xml:space="preserve">
+    <value>Importing Country</value>
+  </data>
+  <data name="SelectListDefaultValueCurrency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="SelectListDefaultValueFeatures" xml:space="preserve">
+    <value>Special Features</value>
+  </data>
+  <data name="SelectListDefaultValueFuelType" xml:space="preserve">
+    <value>Fuel Type</value>
+  </data>
+  <data name="SelectListDefaultValueMake" xml:space="preserve">
+    <value>Make</value>
+  </data>
+  <data name="SelectListDefaultValueModel" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="SelectListDefaultValueSeating" xml:space="preserve">
+    <value>Seating Capacity</value>
+  </data>
+  <data name="SelectListDefaultValueVehicleType" xml:space="preserve">
+    <value>Body Type</value>
+  </data>
+  <data name="SettingsTopMenuRes" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Subscription</value>
+  </data>
+  <data name="SubscriptionRes" xml:space="preserve">
+    <value>Registrations</value>
+  </data>
+  <data name="SuccessRegistrationRes" xml:space="preserve">
+    <value>Registration Successful</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="TermsConditions" xml:space="preserve">
+    <value>Terms and Conditions</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Trademark" xml:space="preserve">
+    <value>West Blue Consulting - All rights reserved.</value>
+  </data>
+  <data name="TransitionTime" xml:space="preserve">
+    <value>Transition Time</value>
+  </data>
+  <data name="UpdateCountryRes" xml:space="preserve">
+    <value>Update Country</value>
+  </data>
+  <data name="UpdateDocumentCategoryRes" xml:space="preserve">
+    <value>Update Document Category</value>
+  </data>
+  <data name="UpdateHSCodePoolRes" xml:space="preserve">
+    <value>Update HS Code</value>
+  </data>
+  <data name="UpdateOrganisationApprovalRoleRes" xml:space="preserve">
+    <value>Update Organisation Approval Role</value>
+  </data>
+  <data name="UpdatePermissionRes" xml:space="preserve">
+    <value>Update Permission</value>
+  </data>
+  <data name="UpdateProcessRequiredDocumentRes" xml:space="preserve">
+    <value>Update Process Required Document</value>
+  </data>
+  <data name="UpdateProcessRes" xml:space="preserve">
+    <value>Update Process</value>
+  </data>
+  <data name="UpdateRequiredDocumentRes" xml:space="preserve">
+    <value>Update Required Document</value>
+  </data>
+  <data name="UpdateResourceAreaRes" xml:space="preserve">
+    <value>Update Resource Area</value>
+  </data>
+  <data name="UpdateResourceRes" xml:space="preserve">
+    <value>Update Resource</value>
+  </data>
+  <data name="UpdateSubscriptionPlanRes" xml:space="preserve">
+    <value>Update Subscription Plan</value>
+  </data>
+  <data name="UpdateSubscriptionTypeRes" xml:space="preserve">
+    <value>Update Subscription Type</value>
+  </data>
+  <data name="UpdateTopRescourceRes" xml:space="preserve">
+    <value>Update Resource Header</value>
+  </data>
+  <data name="UpdateVehicleMakeRes" xml:space="preserve">
+    <value>Update Vehicle Make</value>
+  </data>
+  <data name="UpdateVehicleModelRes" xml:space="preserve">
+    <value>Update Vehicle Model</value>
+  </data>
+  <data name="UsefulLinks" xml:space="preserve">
+    <value>Useful Links</value>
+  </data>
+  <data name="UserPermissionRes" xml:space="preserve">
+    <value>User Permissions</value>
+  </data>
+  <data name="UserProfileRes" xml:space="preserve">
+    <value>User Profile</value>
+  </data>
+  <data name="VehicleMakeNamelbl" xml:space="preserve">
+    <value>Vehicle Make</value>
+  </data>
+  <data name="WorkflowRes" xml:space="preserve">
+    <value>Request Approvals</value>
+  </data>
+</root>

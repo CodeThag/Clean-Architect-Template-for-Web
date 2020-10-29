@@ -1,0 +1,57 @@
+﻿@using WebUI.Helper
+
+<!DOCTYPE html>
+<html lang="en" @ViewData["HtmlAttribute"]>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Project Template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="@ViewData["MetaDescription"]" />
+    <meta name="author" content="XanderByte" />
+    <meta name="keywords" content="@ViewData["MetaKeywords"]" />
+
+    @RenderSection("MetaTag", required: false)
+
+    <!-- ================== BEGIN core-css ================== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="~/css/facebook/app.min.css" rel="stylesheet" />
+    <!-- ================== END core-css ================== -->
+    <!-- Add local styles, mostly for plugins css file -->
+    @if (IsSectionDefined("Styles"))
+    {
+        @RenderSection("Styles", required: false)
+    }
+
+</head>
+<body class="@ViewData["BodyClass"]">
+    <!-- begin #page-loader -->
+    <div id="page-loader" class="fade show"><span class="spinner"></span></div>
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+
+    <div id="page-container" class="page-container fade page-sidebar-fixed page-header-fixed">
+        <partial name="_Header" />
+
+        <partial name="_Sidebar" />
+
+        <div id="content" class="content @ViewData["PageContentClass"]" @ViewData["PageContentAttribute"]>
+            @RenderBody()
+            <!-- BEGIN btn-scroll-top -->
+            <a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+            <!-- END btn-scroll-top -->
+        </div>
+
+        @RenderSection("OutterAppContainerContent", required: false)
+
+        @*<partial name="_Footer" />*@
+
+    </div>
+
+    <!-- ================== BEGIN core-js ================== -->
+    <script src="~/js/app.min.js"></script>
+    <script src="~/js/theme/default.min.js"></script>
+    <!-- ================== END core-js ================== -->
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -18,14 +18,22 @@ namespace Infrastructure
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
+            services.AddScoped<IGlobalSetting, GlobalSetting>();
+
             services.AddTransient<IDateTime, DateTimeService>();
-            //services.AddTransient<ISubscriptionService, SubscriptionService>();
+            services.AddTransient<ICurrentUserProfile, CurrentUserProfile>();
+            services.AddTransient<INotificationService, NotificationService>();
+
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<ISmsSender, SmsSender>();
+
+
             //services.AddTransient<IWbcSsoHttpClientService, WbcSsoHttpClientService>();
             //services.AddTransient<ISsoService, SsoService>();
-            //services.AddTransient<INotificationService, NotificationService>();
             //services.AddTransient<IWorkflowService, WorkFlowService>();
             //services.AddTransient<IDocumentService, DocumentService>();
             //services.AddTransient<ILongRunningTaskProccesor, LongRunningTaskProcessor>();
+
             return services;
         }
     }

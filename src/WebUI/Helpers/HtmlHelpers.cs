@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace WebUI.Helper
+namespace WebUI.Helpers
 {
     public static class HtmlHelpers
     {

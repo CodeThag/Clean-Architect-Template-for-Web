@@ -14,6 +14,5 @@ namespace Application.Common.Configuration
         public string ExecuteCommandPostUrl { get; set; }
         public string GetAvailableStateToSetPostUrl { get; set; }
         public string SetStatePostUrl { get; set; }
-
     }
 }

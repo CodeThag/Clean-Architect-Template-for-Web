@@ -4,11 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WebUI.Helpers;
 
 namespace WebUI
 {
@@ -41,6 +42,13 @@ namespace WebUI
                     if (context.Database.IsSqlServer()) context.Database.Migrate();
 
                     await ApplicationDbContextSeed.SeedSampleDataAsync(context);
+
+                    // Bootstrap default roles and user
+                    var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
+
+                    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
+                    MyIdentityDataInitializer.SeedData(userManager, roleManager);
                 }
                 catch (Exception ex)
                 {

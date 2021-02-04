@@ -27,15 +27,26 @@ namespace Infrastructure.Persistence
             _dateTime = dateTime;
         }
 
+        public DbSet<ApplicationType> ApplicationTypes { get; set; }
         public DbSet<Country> Countries { get; set; }
-        public DbSet<State> States { get; set; }
         public DbSet<City> Cities { get; set; }
-        //public DbSet<AspNetRoleClaims> AspNetRoleClaims { get; set; }
-        //public DbSet<AspNetRoles> AspNetRoles { get; set; }
-        //public DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
-        //public DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
-        //public DbSet<AspNetUserRoles> AspNetUserRoles { get; set; }
-        //public DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<MenuCollection> MenuCollections { get; set; }
+        public DbSet<MenuItem> MenuItems { get; set; }
+        public DbSet<Organisation> Organisations { get; set; }
+        public DbSet<OrganisationType> OrganisationTypes { get; set; }
+        public DbSet<PaymentType> PaymentTypes { get; set; }
+        public DbSet<PaymentPurpose> PaymentPurposes { get; set; }
+        public DbSet<PaymentPurposeFixedLineItem> PaymentPurposeFixedLineItems { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<State> States { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<WorkflowScheme> WorkflowSchemes { get; set; }
+        public DbSet<WorkflowInbox> WorkflowInboxes { get; set; }
+        public DbSet<NotificationTemplate> NotificationTemplates { get; set; }
+        public DbSet<SystemNotification> SystemNotifications { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
@@ -101,6 +112,11 @@ namespace Infrastructure.Persistence
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(builder);
             // Prevent Cascade on Delete
+
+            builder.Entity<MenuItem>()
+                .HasOne(x => x.Parent)
+                .WithMany(x => x.Children)
+                .OnDelete(DeleteBehavior.NoAction);
         }
 
         public void RollbackTransaction()

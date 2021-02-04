@@ -18,6 +18,8 @@ using Microsoft.AspNetCore.Http;
 using Application.Common.Interfaces;
 using WebUI.Services;
 using WebUI.Dependencies;
+using FluentValidation.AspNetCore;
+using Infrastructure.Services;
 
 namespace WebUI
 {
@@ -66,16 +68,20 @@ namespace WebUI
         {
             services.AddConfigurations(Configuration);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<ICurrentUserService, CurrentUserService>();
             // Added Infrastructure Dependency Services
             services.AddInfrastructure(Configuration);
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
             // Added Application Dependency Services
             services.AddApplication();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders(); 
 
             services.AddRazorPages();
+            services.AddMvc(opt => { opt.EnableEndpointRouting = false; })
+                .AddFluentValidation(options => options.RegisterValidatorsFromAssemblyContaining<Startup>());
+
+            services.AddAuthorization(options => { options.AddAuthorizationPolicy(); });
         }
     }
 }

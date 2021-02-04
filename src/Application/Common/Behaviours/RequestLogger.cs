@@ -28,7 +28,7 @@ namespace Application.Common.Behaviours
 
             if (!string.IsNullOrEmpty(userId))
             {
-                userName = _currentUserService.GetUserName(userId);
+                userName = _currentUserService.GetUserName();
             }
 
             _logger.LogInformation("WBC Template NG Request: {Name} {@UserId} {@UserName} {@Request}",

@@ -10,7 +10,7 @@ namespace Application.Common.Enums
         Info,
         [StringValue("warning")]
         Warning,
-        [StringValue("error")]
+        [StringValue("danger")]
         Error
     }
 }

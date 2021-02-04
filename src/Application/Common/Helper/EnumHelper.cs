@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using Application.Common.Attributes;
 using Application.Common.Enums;
+using Application.Common.Models;
 using PolicyClaimValues = Application.Common.Models.PolicyClaimValues;
 
 namespace Application.Common.Helper
@@ -44,6 +45,7 @@ namespace Application.Common.Helper
 
             throw new ArgumentException("The value '" + value + "' does not match a valid enum name or description.");
         }
+
 
         /// <summary>
         /// Gets an attribute on an enum field value
@@ -108,7 +110,7 @@ namespace Application.Common.Helper
         {
             var attribute = enumValue.GetAttributeOfType<StringDescriptionAttribute>();
 
-            return attribute == null ? String.Empty : attribute.StringDescription;
+            return attribute == null ? string.Empty : attribute.StringDescription;
         }
 
         /// <summary>
@@ -120,7 +122,7 @@ namespace Application.Common.Helper
         {
             var attribute = enumValue.GetAttributeOfType<StringValueAttribute>();
 
-            return attribute == null ? String.Empty : attribute.StringValue;
+            return attribute == null ? string.Empty : attribute.StringValue;
         }
 
         public static string GetAttributeStringValue(this Policies policy)
@@ -133,6 +135,7 @@ namespace Application.Common.Helper
         public static PolicyClaimValues GetPolicyClaimValues(this Policies enums)
         {
             var attribue = enums.GetAttributeOfType<PolicyClaimValuesAttribute>();
+
             return attribue == null ?
                 new PolicyClaimValues() :
                 new PolicyClaimValues
@@ -142,7 +145,6 @@ namespace Application.Common.Helper
                     RequiredPermissions = attribue.RequiredPermissions
                 };
         }
-
 
         /// <summary>
         /// Gets the string value attribute of an enum field value.
@@ -176,13 +178,13 @@ namespace Application.Common.Helper
         /// <returns></returns>
         public static T FromName<T>(this string desc) where T : struct
         {
-            string attr;
-            Boolean found = false;
-            T result = (T)Enum.GetValues(typeof(T)).GetValue(0);
+            var found = false;
 
-            foreach (object enumVal in Enum.GetValues(typeof(T)))
+            var result = (T)Enum.GetValues(typeof(T)).GetValue(0);
+
+            foreach (var enumVal in Enum.GetValues(typeof(T)))
             {
-                attr = ((Enum)enumVal).ToName();
+                var attr = ((Enum)enumVal).ToName();
 
                 if (attr == desc)
                 {

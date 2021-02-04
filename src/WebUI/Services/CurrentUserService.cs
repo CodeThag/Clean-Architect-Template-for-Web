@@ -1,6 +1,8 @@
 ﻿using Application.Common.Enums;
 using Application.Common.Interfaces;
+using Domain.Entities;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,6 @@ namespace WebUI.Services
     public class CurrentUserService : ICurrentUserService
     {
         private readonly IHttpContextAccessor _httpContext;
-
         public CurrentUserService(IHttpContextAccessor httpContext)
         {
             _httpContext = httpContext;
@@ -24,20 +25,16 @@ namespace WebUI.Services
             throw new NotImplementedException();
         }
 
+
         public string GetUserId()
         {
             return _httpContext.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
         }
 
-        public string GetUserName(string userId)
+        public string GetUserName()
         {
             var username = _httpContext.HttpContext?.User?.Identity.Name;
             return username;
-        }
-
-        public int GetUserOrganisationId()
-        {
-            throw new NotImplementedException();
         }
 
         public bool UserHasRole(Roles role)
